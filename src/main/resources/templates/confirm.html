@@ -25,7 +25,8 @@
       入力内容をご確認ください。<br/>
       この内容でお見積りする場合は、「概算お見積もりをする」ボタンを押してください。
     </div>
-    <ul th:if="${#fields.hasErrors('all')}">
+    <ul  th:if="${#fields.hasErrors('all')}">
+      <!-- <li style="color:red" th:each="err : ${#fields.errors('all')}" th:text="${err}"></li> -->
       <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
     </ul>
     <div class="col-sm-12">
@@ -95,22 +96,22 @@
           <tbody>
           <tr>
             <th style="width: 40%">段ボールの個数</th>
-            <td><span th:text="*{box}"></span></td>
+            <td><span th:text="*{box}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('box')}" th:errors="*{box}"></span></p></td>
             <input type="hidden" name="box" id="box" th:value="*{box}"/>
           </tr>
           <tr>
             <th>ベッドの個数</th>
-            <td><span th:text="*{bed}"></span></td>
+            <td><span th:text="*{bed}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('bed')}" th:errors="*{bed}"></span></p></td>
             <input type="hidden" name="bed" id="bed" th:value="*{bed}"/>
           </tr>
           <tr>
             <th>自転車の個数</th>
-            <td><span th:text="*{bicycle}"></span></td>
+            <td><span th:text="*{bicycle}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('bicycle')}" th:errors="*{bicycle}"></span></p></td>
             <input type="hidden" name="bicycle" id="bicycle" th:value="*{bicycle}"/>
           </tr>
           <tr>
             <th>洗濯機の個数</th>
-            <td><span th:text="*{washingMachine}"></span></td>
+            <td><span th:text="*{washingMachine}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('washingMachine')}" th:errors="*{washingMachine}"></span></p></td>
             <input type="hidden" name="washingMachine" id="washingMachine" th:value="*{washingMachine}"/>
           </tr>
           <tr>
