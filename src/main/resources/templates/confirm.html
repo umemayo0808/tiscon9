@@ -25,10 +25,10 @@
       入力内容をご確認ください。<br/>
       この内容でお見積りする場合は、「概算お見積もりをする」ボタンを押してください。
     </div>
-    <ul  th:if="${#fields.hasErrors('all')}">
+    <!-- <ul  th:if="${#fields.hasErrors('all')}"> -->
       <!-- <li style="color:red" th:each="err : ${#fields.errors('all')}" th:text="${err}"></li> -->
-      <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
-    </ul>
+      <!-- <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li> -->
+    <!-- </ul> -->
     <div class="col-sm-12">
       <div class="sub-title">お客様情報</div>
       <table class="table table-bordered">
@@ -38,7 +38,7 @@
         <tr>
           <th style="width: 40%">氏名</th>
           <td>
-            <span th:text="*{customerName}" />
+            <span th:text="*{customerName}" /><p><span style="color: red;" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></span></p>
           </td>
           <input type="hidden" name="customerName" id="customerName" th:value="*{customerName}"/>
         </tr>
@@ -82,7 +82,7 @@
         </tr>
         <tr>
           <th>お届け先住所（市区町村以下）</th>
-          <td><span th:text="*{newAddress}"></span></td>
+          <td><span th:text="*{newAddress}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('newAddress')}" th:errors="*{newAddress}"></span></p></td>
           <input type="hidden" name="newAddress" id="newAddress" th:value="*{newAddress}"/>
         </tr>
         </tbody>
@@ -116,7 +116,7 @@
           </tr>
           <tr>
             <th>洗濯機の設置工事申し込み</th>
-            <td><span th:text="*{washingMachineInstallation} ? 'あり' : 'なし'"></span></td>
+            <td><span th:text="*{washingMachineInstallation} ? 'あり' : 'なし'"></span><p><span style="color: red;" th:if="${#fields.hasErrors('washingMachineInstallation')}" th:errors="*{washingMachineInstallation}"></span></p></td>
             <input type="hidden" name="washingMachineInstallation" id="washingMachineInstallation" th:value="*{washingMachineInstallation}"/>
           </tr>
         </tbody>
