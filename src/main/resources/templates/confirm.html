@@ -114,9 +114,14 @@
             <input type="hidden" name="washingMachine" id="washingMachine" th:value="*{washingMachine}"/>
           </tr>
           <tr>
-            <th>洗濯機の設置工事申し込み</th>
+            <th>洗濯機の設置工事</th>
             <td><span th:text="*{washingMachineInstallation} ? 'あり' : 'なし'"></span></td>
             <input type="hidden" name="washingMachineInstallation" id="washingMachineInstallation" th:value="*{washingMachineInstallation}"/>
+          </tr>
+          <tr>
+            <th>引っ越しの時期の入力(月省略)</th>
+            <td><span th:text="*{season} "></span></td>
+            <input type="hidden" name="season" id="season" th:value="*{season}" />
           </tr>
         </tbody>
       </table>
