@@ -44,12 +44,12 @@
         </tr>
         <tr>
           <th>連絡先TEL</th>
-          <td><span th:text="*{tel}"></span></td>
+          <td><span th:text="*{tel}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"></span></p></td>
           <input type="hidden" name="tel" id="tel" th:value="*{tel}"/>
         </tr>
         <tr>
           <th>連絡先メールアドレス</th>
-          <td><span th:text="*{email}"></span></td>
+          <td><span th:text="*{email}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></p></td>
           <input type="hidden" name="email" id="email" th:value="*{email}"/>
         </tr>
       </tbody>
@@ -70,7 +70,7 @@
         </tr>
         <tr>
           <th>集荷元住所（市区町村以下）</th>
-          <td><span th:text="*{oldAddress}"></span></td>
+          <td><span th:text="*{oldAddress}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('oldAddress')}" th:errors="*{oldAddress}"></span></p></td>
           <input type="hidden" name="oldAddress" id="oldAddress" th:value="*{oldAddress}"/>
         </tr>
         <tr>
