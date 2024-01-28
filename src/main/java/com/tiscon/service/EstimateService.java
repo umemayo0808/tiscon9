@@ -91,8 +91,18 @@ public class EstimateService {
         if (dto.getWashingMachineInstallation()) {
             priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
         }
-
-        return priceForDistance + pricePerTruck + priceForOptionalService;
+        int season = dto.getSeason();
+        double N = 0.0;
+        if (season == 3 || season == 4){
+            N = 1.5;
+        }
+        else if(season == 9){
+            N = 1.2;
+        }
+        else{
+            N = 1.0;
+        }
+        return ((int)(Math.round((priceForDistance + pricePerTruck)*N ))) + priceForOptionalService;
     }
 
     /**

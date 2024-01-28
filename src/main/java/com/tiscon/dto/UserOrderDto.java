@@ -26,6 +26,8 @@ public class UserOrderDto {
 
     private boolean washingMachineInstallation;
 
+    private String season;
+
     public String getCustomerName() {
         return customerName;
     }
@@ -120,5 +122,12 @@ public class UserOrderDto {
 
     public void setWashingMachineInstallation(Boolean washingMachineInstallation) {
         this.washingMachineInstallation = washingMachineInstallation;
+    }
+    public int getSeason() {
+        return Integer.parseInt(season);
+    }
+
+    public void setSeason(String season) {
+        this.season = season;
     }
 }
