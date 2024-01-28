@@ -311,3 +311,11 @@ td {
 p span{
     float: right;
 }
+
+.vertical-middle{
+    
+    padding-top: 80px;
+    display: inline-block; /* インライン要素にすることで横に回り込む */
+    vertical-align: middle; /* 上下中央に寄せる */ 
+  }
+  

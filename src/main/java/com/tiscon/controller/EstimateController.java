@@ -2,6 +2,7 @@ package com.tiscon.controller;
 
 import com.tiscon.dao.EstimateDao;
 import com.tiscon.dto.UserOrderDto;
+import com.tiscon.form.AnkeForm;
 import com.tiscon.form.UserOrderForm;
 import com.tiscon.service.EstimateService;
 import org.springframework.beans.BeanUtils;
@@ -67,6 +68,11 @@ public class EstimateController {
         return "top";
     }
 
+    @PostMapping(value = "submit1")
+    String comp(Model model) {
+        return "comp";
+    }
+
     /**
      * 確認画面に遷移する。
      *
@@ -108,6 +114,20 @@ public class EstimateController {
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", userOrderForm);
         return "confirm";
+    }
+
+    /**
+     * アンケート画面に戻る。
+     *
+     * @param ankeForm 顧客が入力したアンケート回答情報
+     * @param model         遷移先に連携するデータ
+     * @return 遷移先
+     */
+    @PostMapping(value = "order", params = "anke")
+    String anke(AnkeForm ankeForm, Model model) {
+        model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
+        model.addAttribute("ankeForm", ankeForm);
+        return "anke";
     }
 
     /**
