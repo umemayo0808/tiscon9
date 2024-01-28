@@ -311,3 +311,10 @@ td {
 p span{
     float: right;
 }
+
+textarea {
+width:100%;
+resize:none;
+border: 1px solid #cddddd;
+border-radius: 3px;
+}
