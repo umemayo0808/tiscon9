@@ -319,3 +319,9 @@ p span{
     vertical-align: middle; /* 上下中央に寄せる */ 
   }
   
+textarea {
+width:100%;
+resize:none;
+border: 1px solid #cddddd;
+border-radius: 3px;
+}

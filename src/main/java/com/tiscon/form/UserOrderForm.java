@@ -56,6 +56,29 @@ public class UserOrderForm {
     private boolean washingMachineInstallation;
 
     private String season;
+    @Numeric
+    @NotBlank
+    private String tv;
+    @Numeric
+    @NotBlank
+    private String sofa;
+    @Numeric
+    @NotBlank
+    private String table;
+    @Numeric
+    @NotBlank
+    private String shelf;
+    @Numeric
+    @NotBlank
+    private String book;
+    @Numeric
+    @NotBlank
+    private String fridge;
+    @Numeric
+    @NotBlank
+    private String oven;
+    
+    private String other;
 
     public String getCustomerName() {
         return customerName;
@@ -159,4 +182,69 @@ public class UserOrderForm {
     public void setSeason(String season) {
         this.season = season;
     }
+
+    public String getTv() {
+        return tv;
+    }
+
+    public void setTv(String tv) {
+        this.tv = tv;
+    }
+
+    public String getSofa() {
+        return sofa;
+    }
+
+    public void setSofa(String sofa) {
+        this.sofa = sofa;
+    }
+
+    public String getTable() {
+        return table;
+    }
+
+    public void setTable(String table) {
+        this.table = table;
+    }
+
+    public String getShelf() {
+        return shelf;
+    }
+
+    public void setShelf(String shelf) {
+        this.shelf = shelf;
+    }
+
+    public String getBook() {
+        return book;
+    }
+
+    public void setBook(String book) {
+        this.book = book;
+    }
+
+    public String getFridge() {
+        return fridge;
+    }
+
+    public void setFridge(String fridge) {
+        this.fridge = fridge;
+    }
+
+    public String getOven() {
+        return oven;
+    }
+
+    public void setOven(String oven) {
+        this.oven = oven;
+    }
+
+    public String getOther() {
+        return other;
+    }
+
+    public void setOther(String other) {
+        this.other = other;
+    }
+
 }

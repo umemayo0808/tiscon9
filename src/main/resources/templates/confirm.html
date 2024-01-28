@@ -52,6 +52,11 @@
           <td><span th:text="*{email}"/><p><span style="color: red;" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></p></td>
           <input type="hidden" name="email" id="email" th:value="*{email}"/>
         </tr>
+        <tr>
+          <th>引っ越しの時期（月省略 例:1月→1）</th>
+          <td><span th:text="*{season}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('washingMachine')}" th:errors="*{washingMachine}"></span></p></td>
+          <input type="hidden" name="season" id="season" th:value="*{season}"/>
+        </tr>
       </tbody>
       </table>
     </div>
@@ -119,12 +124,47 @@
             <td><span th:text="*{washingMachineInstallation} ? 'あり' : 'なし'"></span><p><span style="color: red;" th:if="${#fields.hasErrors('washingMachineInstallation')}" th:errors="*{washingMachineInstallation}"></span></p></td>
             <input type="hidden" name="washingMachineInstallation" id="washingMachineInstallation" th:value="*{washingMachineInstallation}"/>
           </tr>
+          
           <tr>
-            <th>引っ越しの時期（月省略）</th>
-            <td><span th:text="*{season}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('washingMachine')}" th:errors="*{washingMachine}"></span></p></td>
-            <input type="hidden" name="season" id="season" th:value="*{season}"/>
+            <th>テレビの個数</th>
+            <td><span th:text="*{tv}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('tv')}" th:errors="*{tv}"></span></p></td>
+            <input type="hidden" name="tv" id="tv" th:value="*{tv}"/>
           </tr>
           <tr>
+            <th>ソファーの個数</th>
+            <td><span th:text="*{sofa}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('sofa')}" th:errors="*{sofa}"></span></p></td>
+            <input type="hidden" name="sofa" id="sofa" th:value="*{sofa}"/>
+          </tr>
+          <tr>
+            <th>テーブルの個数</th>
+            <td><span th:text="*{table}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('table')}" th:errors="*{table}"></span></p></td>
+            <input type="hidden" name="table" id="table" th:value="*{table}"/>
+          </tr>
+          <tr>
+            <th>タンスの個数</th>
+            <td><span th:text="*{shelf}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('shelf')}" th:errors="*{shelf}"></span></p></td>
+            <input type="hidden" name="shelf" id="shelf" th:value="*{shelf}"/>
+          </tr>
+          <tr>
+            <th>本棚の個数</th>
+            <td><span th:text="*{book}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('book')}" th:errors="*{book}"></span></p></td>
+            <input type="hidden" name="book" id="book" th:value="*{book}"/>
+          </tr>
+          <tr>
+            <th>冷蔵庫の個数</th>
+            <td><span th:text="*{fridge}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('fridge')}" th:errors="*{fridge}"></span></p></td>
+            <input type="hidden" name="fridge" id="fridge" th:value="*{fridge}"/>
+          </tr>
+          <tr>
+            <th>レンジの個数</th>
+            <td><span th:text="*{oven}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('oven')}" th:errors="*{oven}"></span></p></td>
+            <input type="hidden" name="oven" id="oven" th:value="*{oven}"/>
+          </tr>
+          <tr>
+            <th>その他のお荷物</th>
+            <td><span th:text="*{other}"></span></td>
+            <input type="hidden" name="other" id="other" th:value="*{other}"/>
+          </tr>  
         </tbody>
       </table>
       <div class="form-group">
