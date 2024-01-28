@@ -53,7 +53,7 @@
           <input type="hidden" name="email" id="email" th:value="*{email}"/>
         </tr>
         <tr>
-          <th>引っ越しの時期（月省略 例:1月→1）</th>
+          <th>引っ越しの時期（月省略 ）</th>
           <td><span th:text="*{season}"></span><p><span style="color: red;" th:if="${#fields.hasErrors('washingMachine')}" th:errors="*{washingMachine}"></span></p></td>
           <input type="hidden" name="season" id="season" th:value="*{season}"/>
         </tr>
