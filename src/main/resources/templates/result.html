@@ -22,6 +22,15 @@
       <div class="text-center">
         <div class="primary-text"><span th:text="${price}"></span>円</div>
       </div>
+      <div class="form-group">
+        <div class="text-center">
+          <button type="submit" name="anke" class="btn-back">アンケートに回答</button>
+        </div>
+      </div>
+
+
+
+
       <div class="sub-title">お客様情報</div>
         <table class="table table-bordered">
         <col span="1" style="background-color: #FFFFFF;">
@@ -109,8 +118,9 @@
       </table>
       <div class="form-group">
         <div class="text-center">
-          <button type="submit" name="backToConfirm" class="btn-back">TOPへ戻る</button>
+          <button type="submit" name="backToConfirm" class="btn-back">一つ前のページへ戻る</button>
           <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼へ</button>
+          <a class="btn btn-back" href="/" role="button">TOPへ戻る</a>
         </div>
       </div>
     </div>

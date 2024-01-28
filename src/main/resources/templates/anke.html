@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>アンケート画面</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{http://fonts.googleapis.com/css?family=Exo:900}"
+        href="http://fonts.googleapis.com/css?family=Exo:900"/>
+  <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+</head>
+<body>
+    <nav th:insert="header.html :: header"></nav>
+<div class="container">
+  <form th:action="@{/submit1}" class="form-horizontal" method="post">
+    
+    <div class="page-title">
+      アンケート回答入力
+    </div>
+    
+    <div class="col-sm-12">
+      <fieldset>
+        <div class="form-group">
+          <label for="manzoku">満足度</label>
+          <select id="manzoku" name="manzoku" class="form-control" >
+            <option th:value="1-1" >大変満足</option>
+            <option th:value="1-2" >どちらかといえば満足</option>
+            <option th:value="1-3" >どちらかといえば満足でない</option>
+            <option th:value="1-4" >全く満足でない</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="use">使いやすさ</label>
+          <select id="use" name="use" class="form-control" >
+            <option th:value="2-1" >大変使いやすい</option>
+            <option th:value="2-1" >どちらかといえば使いやすい</option>
+            <option th:value="2-1" >どちらかといえば使いにくい</option>
+            <option th:value="2-4" >とても使いにくい</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="look">サイトの見やすさ</label>
+          <select id="look" name="look" class="form-control" >
+            <option th:value="3-1" >とても見やすい</option>
+            <option th:value="3-1" >どちらかといえば見やすい</option>
+            <option th:value="3-1" >どちらかといえば見にくい</option>
+            <option th:value="3-4" >とても見にくい</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="reuse">また使いたいか</label>
+          <select id="reuse" name="reuse" class="form-control" >
+            <option th:value="4-1" >とても使いたい</option>
+            <option th:value="4-2" >どちらかといえば使いたい</option>
+            <option th:value="4-3" >どちらかといえば使いにくい</option>
+            <option th:value="4-4" >全く使いたくない</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="elsee">その他ご意見</label>
+          <input type="text" id="elsee" name="elsee"  class="form-control"
+                 >
+        </div>
+      </fieldset>
+      <div class="form-group">
+        <div class="text-center">
+          <button type="submit" name="comp" class="btn-back">TOP</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+
+</html>

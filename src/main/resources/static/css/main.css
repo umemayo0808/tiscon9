@@ -307,3 +307,12 @@ td {
     border-radius: .28571429rem;
     border: 1px solid rgba(34,36,38,.15);
 }
+
+
+.vertical-middle{
+    
+    padding-top: 80px;
+    display: inline-block; /* インライン要素にすることで横に回り込む */
+    vertical-align: middle; /* 上下中央に寄せる */ 
+  }
+  
